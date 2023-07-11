@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Willian Charles Belolli - Portifolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="C:\Users\wbelolli\VS-Projects\Portifolio\img\favicon.ico">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Top menu on small screens -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <img src="C:\Users\wbelolli\VS-Projects\Portifolio\img\PicID.png" style="width:80%;" class="w3-round"><br><br>
+    <h4><b>Willian Belolli</b></h4>
+    <p class="w3-text-grey">Full Stack Developer</p>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-sharp fa-solid fa-user w3-margin-right"></i>ABOUT ME</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+  </div>
+
+  <div class="w3-panel w3-large">
+    <a href="https://github.com/wcbelolli" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/willianbelolli/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! (Makes the content remain in the right position of the page)-->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Push down content on small screens (Mobile Only)--> 
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Photo grid (Describes a bit of each image)-->
+  <div class="w3-row">
+    <div class="w3-third">
+      <img src="C:\Users\wbelolli\VS-Projects\Portifolio\img\atados.jpg" style="width:400px;height:500px;" onclick="onClick(this)" alt="In 2015 the Flor 
+      Gentil Institute collects the flowers that would be discarded and uses this material to assemble new arrangements that are delivered in nursing homes for the elderly,
+      care institutions and for low-income people. A project that combines social responsibility and sustainability.">
+      <img src="C:\Users\wbelolli\VS-Projects\Portifolio\img\certificate.jpg" style="width:400px;height:500px;" onclick="onClick(this)" alt="The Information Technology Infrastructure
+       Library (ITIL) is a set of detailed practices for IT activities such as IT service management and IT asset management that focus on aligning IT services with the needs of 
+       the business.">
+    </div>
+    <div class="w3-third">
+      <img src="C:\Users\wbelolli\VS-Projects\Portifolio\img\graduation.jpg" style="width:400px;height:500px;" onclick="onClick(this)" alt="Graduation information refers to the 
+      completion of all degree requirements and the certification and recording of them on a student's official transcript. Students can graduate in different months depending on 
+      their academic progress. They should check their degree audit online and register for the term in which they want to graduate. The Graduation Department in Student Records 
+      determines the completion of degree and certificate requirements.">
+      <img src="C:\Users\wbelolli\VS-Projects\Portifolio\img\latino.jpg" style="width:400px;height:500px;" onclick="onClick(this)" alt="Graduation information refers to the 
+      completion of all degree requirements and the certification and recording of them on a student's official transcript. Students can graduate in different months depending 
+      on their academic progress. They should check their degree audit online and register for the term in which they want to graduate. The Graduation Department in Student Records
+       determines the completion of degree and certificate requirements.">
+    </div>
+    <div class="w3-third">
+      <img src="C:\Users\wbelolli\VS-Projects\Portifolio\img\Ireland.jpg" style="width:400px;height:500px;" onclick="onClick(this)" alt="Graduation information refers to the 
+      completion of all degree requirements and the certification and recording of them on a student's official transcript. Students can graduate in different months depending on
+       their academic progress. They should check their degree audit online and register for the term in which they want to graduate. The Graduation Department in Student Records
+        determines the completion of degree and certificate requirements.">
+      <img src="C:\Users\wbelolli\VS-Projects\Portifolio\img\project.png" style="width:400px;height:500px;" onclick="onClick(this)" alt="Graduation information refers to the
+       completion of all degree requirements and the certification and recording of them on a student's official transcript. Students can graduate in different months depending 
+       on their academic progress. They should check their degree audit online and register for the term in which they want to graduate. The Graduation Department in Student Records
+        determines the completion of degree and certificate requirements.">
+    </div>
+  </div>
+
+  <!-- Space between grid and the ABOUT section -->
+  <div class="w3-center w3-padding-32"></div>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">x</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+    <h4><b>About Me</b></h4>
+    <img src="C:\Users\wbelolli\VS-Projects\Portifolio\img\profile.jpeg" alt="Me" class="w3-image w3-padding-32" width="300" height="350">
+    <h4>Willian Belolli</h4>
+    <div class="w3-content w3-justify" style="max-width:350px">  
+      <p>I am a bilingual (Portuguese and English) professional European citizen, postgraduate in Science in Computing. I hold certificates such as ITIL Foundation 
+        and ISO IEC 20000, within 5+ years of experience in the Technology Engineer industry. I am problem solving and detailed oriented person who is always interested 
+        in learning new technologies with the expertise to troubleshooting and deal with different system architectures (ERP, Cloud, Deployment, DB).<br><br>
+
+        Over the course of my career, I have worked supporting users through the phone, email, chat tools and face to face, providing exceptional support that meets their needs, 
+        training and supporting customers with invoice authorization, peripherals, scanners, tax processing, implementation of new technologies, documentation of internal resources 
+        to provide an quickly and standard support. <br> <br>
+        
+        Being an international student, I have repeatedly been exposed to new cultures and diverse groups of people. This has made me able to quickly adapt to changes and gain a 
+        broader perspective. I keep my goals and tasks organized to maintain productivity.<br> <br>
+        
+        I am always interested in hearing from former colleagues, managers, or just interesting professionals, so feel free to contact me if you would like to connect.
+      </p>
+
+      <a href="C:\Users\wbelolli\VS-Projects\Portifolio\files\Resume-Willian-Belolli.pdf" download target="_blank">
+        <p><button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom">Download Resume</button></p>
+      </a>
+      
+      <hr class="w3-opacity">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey" id="contact">  
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3>Contact</h3>
+          <p class="fa fa-envelope fa-fw w3-margin-right">WILLIAMCHARLLESBELOLLI@HOTMAIL.COM</p><br>
+          <p class="fa fa-phone fa-fw w3-margin-right">+353838858622</p> 
+      </div>
+      <div class="w3-third"></div>
+  </footer>
+  <!-- Black footer in the very end of the page-->
+  <div class="w3-black w3-center w3-padding-24"></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>
